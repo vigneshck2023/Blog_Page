@@ -1,0 +1,155 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 30px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 18px;
+}
+.navbar .nav-right a {
+  margin: 0 8px;
+}
+.subscribe-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.subscribe-btn:hover {
+  background: white;
+  color: #111;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #111;
+  padding: 120px 30px;
+  color: white;
+}
+.hero .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+
+.logo img{
+    width: 300px;
+}
+/* Blog Post Section */
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.post-image img {
+  width: 550px;
+  border-radius: 6px;
+  background: #f4f4f4;
+}
+.post-content {
+  max-width: 600px;
+  margin-left: 40px;
+}
+.category {
+  color: #0073ff;
+  font-size: 14px;
+  font-weight: bold;
+}
+.title {
+  font-size: 28px;
+  margin: 10px 0;
+}
+.excerpt {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+.post-meta {
+  font-size: 13px;
+  color: #444;
+}
+.post-meta i {
+  margin-right: 6px;
+}
+
+/* Blog Grid Section */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 5px solid #cecccc;
+  border-bottom: 1px solid #dfdada;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 220;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card .category {
+  color: #0073ff;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px 15px 5px;
+}
+.card .title {
+  font-size: 18px;
+  margin: 0 15px 10px;
+}
+.card .excerpt {
+  font-size: 14px;
+  color: #666;
+  margin: 0 15px 15px;
+  line-height: 1.5;
+}
+.card .post-meta {
+  font-size: 12px;
+  color: #444;
+  margin: 0 15px 15px;
+}
+.card .post-meta i {
+  margin-right: 6px;
+}
