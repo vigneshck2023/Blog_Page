@@ -65,11 +65,11 @@ body {
 .post {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 50px;
   max-width: 1000px;
   margin: 0 auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .post-image img {
   width: 550px;
