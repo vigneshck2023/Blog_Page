@@ -17,6 +17,7 @@ body {
   align-items: center;
   background: #111;
   padding: 15px 30px;
+  flex-wrap: wrap;
 }
 .navbar a {
   color: white;
@@ -56,11 +57,10 @@ body {
   margin-top: 8px;
   opacity: 0.8;
 }
-
-
-.logo img{
-    width: 300px;
+.logo img {
+  width: 300px;
 }
+
 /* Blog Post Section */
 .post {
   display: flex;
@@ -69,8 +69,8 @@ body {
   padding: 50px;
   max-width: 1000px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
-
 .post-image img {
   width: 550px;
   border-radius: 6px;
@@ -125,7 +125,7 @@ body {
 }
 .card img {
   width: 100%;
-  height: 220;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -152,4 +152,117 @@ body {
 }
 .card .post-meta i {
   margin-right: 6px;
+}
+
+
+/* Hamburger Button */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-left {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Show toggle button */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Hide nav links initially */
+  .nav-right {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-right a,
+  .nav-right .subscribe-btn {
+    margin: 10px 0;
+  }
+
+  /* Show nav links when active */
+  .nav-right.active {
+    display: flex;
+  }
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .post {
+    flex-direction: column;
+    align-items: center;
+  }
+  .post-image img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  .post-content {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .nav-left, .navbar .nav-right {
+    margin: 10px 0;
+  }
+  .hero {
+    padding: 80px 20px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .excerpt {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 16px;
+    margin: 5px;
+  }
+  .subscribe-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+  .posts-grid {
+    padding: 20px;
+    gap: 15px;
+  }
+  .card img {
+    height: 180px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .excerpt {
+    font-size: 13px;
+  }
 }
